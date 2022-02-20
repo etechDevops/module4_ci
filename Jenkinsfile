@@ -26,8 +26,7 @@ pipeline {
             steps {
                 
                 echo "Running Unit Tests"
-                
-                sh 'mvn test'
+
             }
         }
 
