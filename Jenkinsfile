@@ -18,6 +18,5 @@ pipeline{
         archive 'target/*.jar'
       }
     }
-  }  
-  
+  }    
 }
