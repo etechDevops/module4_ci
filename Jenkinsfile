@@ -40,5 +40,13 @@ pipeline{
         }
       }
     }
+    stage('CodeQuality-SAST'){
+      steps{
+        sh 'mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=devsecops-spring-app \
+  -Dsonar.host.url=http://etechconsultingdevops.eastus.cloudapp.azure.com:9000 \
+  -Dsonar.login=a4edfbfb8e683df97236dc0184c956b574fa925e'
+      }
+    }
   }    
 }
