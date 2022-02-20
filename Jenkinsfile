@@ -21,7 +21,8 @@ pipeline{
    }
    stage('Unit Tests - JUnit and JaCoCo') {
       steps {
-        sh "mvn test"
+        sh 'mvn test'
+        sh 'mvn -v'
       }
       post {
         always {
