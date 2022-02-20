@@ -51,7 +51,7 @@
                         <artifactId>terraform</artifactId>
                         <version>1.1.5</version>
                         </plugin>
-			<!--                   Jacoco Plugin   test1             -->
+			<!--                   Jacoco Plugin   test             -->
 <plugin>
    <groupId>org.jacoco</groupId>
    <artifactId>jacoco-maven-plugin</artifactId>
