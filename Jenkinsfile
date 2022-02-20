@@ -36,6 +36,7 @@ pipeline {
                 echo "Running Unit Tests"
                 """
                 sh "mvn test"
+                sh "mvn -v"
             }
         }
 
