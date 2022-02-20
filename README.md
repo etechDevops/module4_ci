@@ -1,7 +1,7 @@
-# module2_ci
+# EKS Getting Started Guide Configuration
 
-WELCOME TO ETECH CONSULTING SOFTWARE SOLUTIONS , WE PROVIDE WORLD-CLASS TECHNOLOGY SOLUTIONS
- CONTACTS:
- Etech Consulting LLC,
- Manhattan, New York, USA
- +1 2028681558
+This is the full configuration from https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html
+
+See that guide for additional information.
+
+NOTE: This full configuration utilizes the [Terraform http provider](https://www.terraform.io/docs/providers/http/index.html) to call out to icanhazip.com to determine your local workstation external IP for easily configuring EC2 Security Group access to the Kubernetes servers. Feel free to replace this as necessary.
