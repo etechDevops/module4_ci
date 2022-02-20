@@ -11,7 +11,7 @@ pipeline{
 				sh 'git version'
 				sh 'mvn -v'
 				// comments //
-			        //coment//
+			       
 			}
 		}
 	}	
