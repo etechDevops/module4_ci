@@ -1,5 +1,6 @@
 pipeline{
   agent any 
+  tools { maven 'maven'}
   stages{
     stage('git-clone'){
       steps{
@@ -9,6 +10,12 @@ pipeline{
     stage('etech-hello'){
       steps{
         sh 'git version'
+      }
+    }
+   stage('Build Artifact - Maven') {
+      steps {
+        sh "mvn clean package -DskipTests=true"
+        archive 'target/*.jar'
       }
     }
   }  
