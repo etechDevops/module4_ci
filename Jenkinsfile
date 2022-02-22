@@ -10,6 +10,7 @@ pipeline{
       stage('etech-hello'){
 	steps{
           sh 'git version'
+	  sh 'mvn' -v	
        }
      }
      stage('Build Artifacts - maven'){
