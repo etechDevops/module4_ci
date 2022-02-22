@@ -7,21 +7,22 @@ pipeline{
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-check', url: 'https://github.com/dilanAzu/module2_ci']]])
          }
        }
-      stage('etech-hello'){
+      stage('dilanAzu-hello'){
 	steps{
           sh 'git version'
 	  sh 'mvn' -v	
-       }
-     }
-     stage('Build Artifacts - maven'){
-	steps {
-	  sh "mvn package -Dkiptest-true"
-	  archive 'target/*.jar'
 	}
-      } 
+      }
+     stage('Build Artifact - Maven') {
+        steps {
+        sh "mvn clean package -DskipTests=true"
+        archive 'target/*.jar'
+      }
     }
-
- }
-		
      
+  }  
+
+}
+
+    
   
