@@ -48,5 +48,19 @@ pipeline{
   -Dsonar.login=01e6afa1885429be4fc842badeb6b471e94176e1'
       }
     }
+    stage('Build Deploy Code') {
+    when {
+        branch 'dev'
+    }
+    steps {
+        sh """
+        echo "Building Artifact"
+        """
+
+        sh """
+        echo "Deploying Code"
+        """
+    }
+    }
   }    
 }
