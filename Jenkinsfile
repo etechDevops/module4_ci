@@ -1,6 +1,5 @@
 pipeline{
   agent any 
-  tool mvn 'mvn'
   stages{
     stage('git-clone'){
       steps{
