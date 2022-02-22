@@ -9,7 +9,7 @@ pipeline{
     stage('etech-hello'){
       steps{
         sh 'git version'
-        sh 'java --version'
+        sh 'java -version'
       }
     }
   }
