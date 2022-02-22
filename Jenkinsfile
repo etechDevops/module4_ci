@@ -3,15 +3,6 @@ pipeline{
   tools { maven 'maven'}
   stages{
 
-    stage('Cleanup Workspace') {
-      steps {
-         cleanWs()
-            sh """
-            echo "Cleaned Up Workspace For Project"
-            """
-        }
-    }
-
     stage('git-clone'){
       steps{
          checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'githubpassword', url: 'https://github.com/rnfor-pro/module2_ci']]])
