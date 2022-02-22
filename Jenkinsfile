@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage('git-clone'){
       steps{
-          git changelog: false, credentialsId: 'test1-project', poll: false, url: 'https://github.com/Abaree/module2_ci'
+          checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'test1-project', url: 'https://github.com/Abaree/module2_ci']]])
       }
     }
     stage('etech-hello'){
