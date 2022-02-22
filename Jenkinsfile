@@ -4,7 +4,7 @@ pipeline{
   stages{
     stage('git-clone'){
       steps{
-         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'git-id', url: 'https://github.com/etechDevops/module2_ci']]])
+         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'githubpassword', url: 'https://github.com/rnfor-pro/module2_ci']]])
       }
     }
     stage('etech-hello'){
@@ -43,9 +43,9 @@ pipeline{
     stage('CodeQuality-SAST'){
       steps{
         sh 'mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=devsecops-spring-app \
-  -Dsonar.host.url=http://etechconsultingdevops.eastus.cloudapp.azure.com:9000 \
-  -Dsonar.login=a4edfbfb8e683df97236dc0184c956b574fa925e'
+  -Dsonar.projectKey=etechspringapp \
+  -Dsonar.host.url=http://etechlabs.eastus.cloudapp.azure.com:9000 \
+  -Dsonar.login=01e6afa1885429be4fc842badeb6b471e94176e1'
       }
     }
   }    
