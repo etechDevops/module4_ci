@@ -1,5 +1,6 @@
 pipeline{
   agent any 
+  tool mvn 'mvn'
   stages{
     stage('git-clone'){
       steps{
@@ -38,7 +39,7 @@ pipeline{
         }
       }
     }
-   // stage('SonarQube - SAST') {
+    stage('SonarQube - SAST') {
       steps {
         withSonarQubeEnv('SonarQube') {
           sh "mvn sonar:sonar -Dsonar.projectKey=numeric-application -Dsonar.host.url=http://devsecops-demo.eastus.cloudapp.azure.com:9000 -Dsonar.login=0925129cf435c63164d3e63c9f9d88ea9f9d7f05"
@@ -49,6 +50,6 @@ pipeline{
           }
         }
       }
-    } //
+    } 
   }
 }
