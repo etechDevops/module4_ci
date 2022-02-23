@@ -42,9 +42,9 @@ pipeline{
       steps {
         withSonarQubeEnv('SonarQube') {
           sh mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=3tech-demo \
-  -Dsonar.host.url=http://abaree.eastus.cloudapp.azure.com:9000 \
-  -Dsonar.login=4ac4ca52158012d7f6d8eb7abdf4d25e37b5ce69
+  -Dsonar.projectKey=3tech-demo \s.cloudapp.azure.com:0 \
+  -Dsonar.login=4ac4ca52158012d7f  6d8eb
+  -Dsonar.host.url=http://abaree.eastu7abdf4d25e37b5ce69900
         }
         timeout(time: 2, unit: 'MINUTES') {
           script {
