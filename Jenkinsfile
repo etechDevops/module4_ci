@@ -41,10 +41,10 @@ pipeline{
     stage('SonarQube - SAST') {
       steps {
         withSonarQubeEnv('SonarQube') {
-          sh "mvn clean verify sonar:sonar \
+          sh mvn clean verify sonar:sonar \
   -Dsonar.projectKey=3tech-demo \
   -Dsonar.host.url=http://abaree.eastus.cloudapp.azure.com:9000 \
-  -Dsonar.login=eca51d7954afeea29f217d7f7381421bc5cea79f"
+  -Dsonar.login=4ac4ca52158012d7f6d8eb7abdf4d25e37b5ce69
         }
         timeout(time: 2, unit: 'MINUTES') {
           script {
