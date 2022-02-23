@@ -10,7 +10,7 @@ pipeline{
       stage('dilanAzu-hello'){
          steps{
             sh 'git version'
-            sh 'mvn' -v  
+            sh 'mvn -v'  
           }
       }
      stage('Build Artifact - Maven') {
