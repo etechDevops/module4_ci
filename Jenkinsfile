@@ -43,9 +43,9 @@ pipeline{
     stage('CodeQuality-SAST'){
       steps{
         sh 'mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=etechspringapp \
-  -Dsonar.host.url=http://etechlabs.eastus.cloudapp.azure.com:9000 \
-  -Dsonar.login=01e6afa1885429be4fc842badeb6b471e94176e1'
+  -Dsonar.projectKey=etech_labs \
+  -Dsonar.host.url=http://elifedevopsdemo.eastus.cloudapp.azure.com:9000 \
+  -Dsonar.login=4aaaf08f2683cd939534baa4e4b1401f291499c9'
       }
     }
   }    
