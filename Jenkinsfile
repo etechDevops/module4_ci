@@ -13,13 +13,13 @@ pipeline{
         sh 'mvn -v'
       }
     }
-   stage('Build Artifact - Maven') {
+    stage('Build Artifact - Maven') {
       steps {
-        sh 'mvn clean package -DskipTests=true'
+        sh "mvn clean package -DskipTests=true"
         archive 'target/*.jar'
       }
    }
-   stage('Unit Tests - JUnit and JaCoCo') {
+    stage('Unit Tests - JUnit and JaCoCo') {
       steps {
         sh 'mvn test'
       }
@@ -30,7 +30,7 @@ pipeline{
         }
       }
     }
-   stage('Mutation Tests - PIT') {
+    stage('Mutation Tests - PIT') {
       steps {
         sh "mvn org.pitest:pitest-maven:mutationCoverage"
       }
