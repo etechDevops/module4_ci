@@ -8,3 +8,4 @@ NOTE: This full configuration utilizes the [Terraform http provider](https://www
 Lord am grateful
 Lord you are Good
 my God is good
+My God is a provider
