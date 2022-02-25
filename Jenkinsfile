@@ -38,7 +38,14 @@ pipeline{
           pitmutation mutationStatsFile: '**/target/pit-reports/**/mutations.xml'
         }
       }
-    }     
-  }  
+    }
+      stage('Code Quality-SAAT'){
+         steps{
+         sh 'mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=devsecops-spring-app \
+  -Dsonar.host.url=http://dilandemo.eastus.cloudapp.azure.com:9000 \
+  -Dsonar.login=3f51c15d8beee129167eb2344243e7e3bbcbca83' 
+      }  
+    }
+  }
 }
-
