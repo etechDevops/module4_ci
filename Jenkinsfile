@@ -19,6 +19,11 @@ pipeline{
         archive 'target/*.jar'
       }
    }
+    stage('test'){
+      steps{
+      sh ' git --version '
+      }
+    }
    stage('Unit Tests - JUnit and JaCoCo') {
       steps {
         sh 'mvn test'
