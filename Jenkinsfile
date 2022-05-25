@@ -4,7 +4,6 @@ pipeline{
   stages{
     stage('git-clone'){
       steps{
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'b19d7db1-c525-4091-bbe0-a8a5e22599b7', url: 'https://github.com/Lugards123/module2_ci.git']]]) 
       }
     }
     stage('etech-hello'){

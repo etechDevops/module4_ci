@@ -5,13 +5,3 @@ This is the full configuration from https://www.terraform.io/docs/providers/aws/
 See that guide for additional information.
 
 NOTE: This full configuration utilizes the [Terraform http provider](https://www.terraform.io/docs/providers/http/index.html) to call out to icanhazip.com to determine your local workstation external IP for easily configuring EC2 Security Group access to the Kubernetes servers. Feel free to replace this as necessary.
-Lord am grateful
-Lord you are Good
-my God is good
-My God is a provider
-Jesus is love
-i am a winner
-g-star-sales
-we are learning pipeline jobs
-we are learning multibranch pipeline job
-I love my life
