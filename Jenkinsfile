@@ -4,7 +4,7 @@ pipeline{
   stages{
     stage('git-clone'){
       steps{
-         git branch: 'main', url: 'https://github.com/etechDevops/module4_ci-cd.git'
+         git branch: 'main', url: 'https://github.com/etechDevops/module4_ci.git'
       }
     }
     stage('etech-hello'){
